@@ -16,7 +16,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type, retry_if_result
-from settings import settings
+from .settings import settings
 
 
 # Module-level cache for instrument metadata (persists across Streamlit logic re-runs)

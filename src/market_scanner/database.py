@@ -1,7 +1,7 @@
 import asyncpg
 import json
-from settings import settings
-from logger import get_logger
+from .settings import settings
+from .logger import get_logger
 
 logger = get_logger(__name__)
 

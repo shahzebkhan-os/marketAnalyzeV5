@@ -4,14 +4,20 @@ import sys
 from collections import deque
 from typing import Dict, List
 import pandas as pd
-from client import GrowwClient
-from database import get_db_pool, init_db, insert_snapshot, insert_features, insert_regime, fetch_recent_history
-from logger import configure_logger, get_logger
-from features import FeatureEngineer
-from regime import RegimeDetector
-from shock_detector import ShockDetector
-from alerts import AlertManager
-from monitoring import Monitor
+import sys
+import os
+# Ensure src is in path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "src"))
+
+from market_scanner.client import GrowwClient
+from market_scanner.database import get_db_pool, init_db, insert_snapshot, insert_features, insert_regime, fetch_recent_history
+from market_scanner.logger import configure_logger, get_logger
+from market_scanner.features import FeatureEngineer
+from market_scanner.regime import RegimeDetector
+from market_scanner.shock_detector import ShockDetector
+from market_scanner.alerts import AlertManager
+from market_scanner.monitoring import Monitor
 import datetime
 
 configure_logger()

@@ -5,7 +5,7 @@ from sklearn.metrics import roc_auc_score
 import logging
 from typing import Dict, List, Optional, Tuple, Deque
 from collections import deque
-from alerts import AlertManager
+from .alerts import AlertManager
 
 logger = logging.getLogger(__name__)
 

@@ -1,10 +1,11 @@
-import asyncio
-import pandas as pd
-import numpy as np
-import logging
-from datetime import datetime
-from ml_engine import ModelTrainer
-from database import get_db_pool, register_model, update_model_status, log_shadow_eval
+import sys
+import os
+# Ensure src is in path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "src"))
+
+from market_scanner.ml_engine import ModelTrainer
+from market_scanner.database import get_db_pool, register_model, update_model_status, log_shadow_eval
 
 logger = logging.getLogger(__name__)
 

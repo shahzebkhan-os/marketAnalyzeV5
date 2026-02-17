@@ -8,14 +8,20 @@ from datetime import datetime
 import os
 import logging
 import time
+import sys
+
+# Ensure src is in path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "src"))
 
 # Configure standard logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-from alerts import AlertManager
-from database import get_db_pool # Simplified: In real app, we need async db access or sync wrapper.
-from client import GrowwClient
-from features import FeatureEngineer
+
+from market_scanner.alerts import AlertManager
+from market_scanner.database import get_db_pool
+from market_scanner.client import GrowwClient
+from market_scanner.features import FeatureEngineer
 
 
 st.set_page_config(page_title="Holographic Glenn Dashboard", layout="wide", page_icon="📈")
@@ -87,8 +93,8 @@ with st.sidebar.expander("🛠️ Manual Trade Override"):
 
 # --- Mock Data Generation (Replace with DB calls) ---
 import asyncio
-from client import GrowwClient
-from features import FeatureEngineer
+from market_scanner.client import GrowwClient
+from market_scanner.features import FeatureEngineer
 
 # --- Data Loading Logic ---
 @st.cache_resource
@@ -625,8 +631,8 @@ with t3:
 
 with t4:
     st.subheader("⚠️ Portfolio Risk & Hedge")
-    from portfolio import Portfolio, Position
-    from risk_engine import RiskEngine
+    from market_scanner.portfolio import Portfolio, Position
+    from market_scanner.risk_engine import RiskEngine
     
     # Mock Portfolio
     p = Portfolio(initial_capital=100000.0)
@@ -673,7 +679,7 @@ with t4:
     st.divider()
     st.markdown("#### 🎲 Monte Carlo Risk Simulation")
     
-    from monte_carlo import MonteCarloEngine
+    from market_scanner.monte_carlo import MonteCarloEngine
     
     if st.button("Run Simulation (2000 Paths)"):
         with st.spinner("Simulating..."):
@@ -699,7 +705,7 @@ with t4:
 
 with t5:
     st.subheader("🧠 Explainability")
-    from explainability import Explainer
+    from market_scanner.explainability import Explainer
     
     # Mock Feature Data for visualization if DB not connected
     # In real app, fetch `explainability_logs`

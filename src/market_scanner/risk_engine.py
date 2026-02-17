@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 from typing import List, Dict, Optional
-from portfolio import Portfolio, Position
+from .portfolio import Portfolio, Position
 
 class RiskEngine:
     def __init__(self):

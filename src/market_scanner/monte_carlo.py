@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 from typing import Dict, List, Tuple
-from portfolio import Portfolio, Position
+from .portfolio import Portfolio, Position
 from scipy.stats import norm
 
 class MonteCarloEngine:
