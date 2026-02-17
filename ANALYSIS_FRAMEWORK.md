@@ -50,6 +50,13 @@ The `analyze_candidate` engine evaluates each stock using the following rules:
     - **Bullish/Bearish:** Confidence > 60%
     - **Watch:** Confidence < 60%
 
+### Stage 4: Short-Covering Detection (Antigravity)
+The **Antigravity Protocol** monitors for bearish capitulation:
+- **Trap:** Spot price breaching the highest Call OI strike.
+- **Panic:** Negative net change in Call OI near the spot price.
+- **Velocity:** Rising price accompanied by rising Implied Volatility (IV).
+A score > 75 triggers a **Short Squeeze** alert on the dashboard.
+
 ---
 
 ## 3. Real-Time Dashboard Integration

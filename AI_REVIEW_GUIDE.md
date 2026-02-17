@@ -15,12 +15,13 @@ This document is structured for an external AI Agent to quickly audit, review, a
 - **Audit Focus:** Rate limiting handling, token lifecycle management, and payload structure for `fetch_option_chain`.
 
 ### Intelligence Logic (`dashboard.py` -> `analyze_candidate`)
-- **Review Item:** `analyze_candidate(symbol)` function.
-- **Mechanism:**
-    - Finds strike with `max(oi)`.
-    - **Bullish:** `if type == 'PE'` (Put Support).
     - **Bearish:** `if type == 'CE'` (Call Resistance).
 - **Audit Focus:** Sentiment scoring logic, confidence weighting (OI Dominance vs. Prox Score), and real-time refresh orchestration.
+
+### Antigravity Protocol (`features.py` -> `calculate_antigravity`)
+- **Review Item:** `calculate_antigravity(chain_df, spot_price)`
+- **Logic:** Weighted score (Trap 40%, Panic 40%, Velocity 20%) detecting short covering.
+- **Audit Focus:** `oi_change` extraction from `client.py` and the normalization of the "Panic" ratio.
 
 ### Feature Engineering (`features.py`)
 - **Review Item:** `FeatureEngineer` class.

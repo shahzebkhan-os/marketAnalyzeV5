@@ -213,11 +213,13 @@ class GrowwClient:
                 # Add CE
                 flat_chain.append({
                     "strike": strike, "type": "CE", "ltp": ce_ltp, "oi": ce_oi,
+                    "oi_change": 0, "iv": 0, "ltp_change": 0, # Placeholder
                     "expiry": nearest_expiry, "call_oi": ce_oi, "put_oi": pe_oi
                 })
                 # Add PE
                 flat_chain.append({
                     "strike": strike, "type": "PE", "ltp": pe_ltp, "oi": pe_oi,
+                    "oi_change": 0, "iv": 0, "ltp_change": 0, # Placeholder
                     "expiry": nearest_expiry, "call_oi": ce_oi, "put_oi": pe_oi
                 })
 
@@ -383,10 +385,25 @@ class GrowwWebProvider:
                 ce = c.get('ce', {})
                 pe = c.get('pe', {})
                 
-                ce_ltp = ce.get('liveData', {}).get('ltp', 0.0)
-                ce_oi = ce.get('liveData', {}).get('oi', 0)
-                pe_ltp = pe.get('liveData', {}).get('ltp', 0.0)
-                pe_oi = pe.get('liveData', {}).get('oi', 0)
+                # Data Extraction
+                ce_live = ce.get('liveData', {})
+                pe_live = pe.get('liveData', {})
+                ce_greeks = ce.get('greeks', {})
+                pe_greeks = pe.get('greeks', {})
+
+                ce_ltp = ce_live.get('ltp', 0.0)
+                ce_oi = ce_live.get('oi', 0)
+                ce_prev_oi = ce_live.get('prevOI', ce_oi)
+                ce_oi_change = ce_oi - ce_prev_oi
+                ce_iv = ce_greeks.get('iv', 0.0)
+                ce_ltp_change = ce_live.get('dayChange', 0.0)
+
+                pe_ltp = pe_live.get('ltp', 0.0)
+                pe_oi = pe_live.get('oi', 0)
+                pe_prev_oi = pe_live.get('prevOI', pe_oi)
+                pe_oi_change = pe_oi - pe_prev_oi
+                pe_iv = pe_greeks.get('iv', 0.0)
+                pe_ltp_change = pe_live.get('dayChange', 0.0)
 
                 # Add CE row
                 flattened_chain.append({
@@ -394,6 +411,9 @@ class GrowwWebProvider:
                     "type": "CE",
                     "ltp": ce_ltp,
                     "oi": ce_oi,
+                    "oi_change": ce_oi_change,
+                    "iv": ce_iv,
+                    "ltp_change": ce_ltp_change,
                     "call_oi": ce_oi,
                     "put_oi": pe_oi,
                     "source": "web_fallback"
@@ -404,6 +424,9 @@ class GrowwWebProvider:
                     "type": "PE",
                     "ltp": pe_ltp,
                     "oi": pe_oi,
+                    "oi_change": pe_oi_change,
+                    "iv": pe_iv,
+                    "ltp_change": pe_ltp_change,
                     "call_oi": ce_oi,
                     "put_oi": pe_oi,
                     "source": "web_fallback"

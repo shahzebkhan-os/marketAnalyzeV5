@@ -111,9 +111,11 @@ async def fetch_live_data(symbol):
             
             # Compute Features
             fe = FeatureEngineer()
+            chain_df = pd.DataFrame(chain_data)
             oi_stats = fe.compute_oi_stats(chain_data)
             greeks = fe.compute_greeks(chain_data, spot)
             vol_stats = fe.compute_volatility(chain_data)
+            antigravity = fe.calculate_antigravity(chain_df, spot)
             
             return {
                 "regime": "Trending (Live)", # Placeholder
@@ -124,6 +126,7 @@ async def fetch_live_data(symbol):
                 "oi_stats": oi_stats,
                 "greeks": greeks,
                 "vol_stats": vol_stats,
+                "antigravity": antigravity,
                 "chain_data": chain_data
             }
     except Exception as e:
@@ -233,6 +236,11 @@ st.title(f"🚀 Holographic Glenn: {symbol}")
 tab1, tab2 = st.tabs(["📉 Active Symbol", "🔍 Market Scanner"])
 
 with tab1:
+    # --- ANTIGRAVITY ALERT ---
+    status = get_market_status()
+    if status and status.get('antigravity', {}).get('status'):
+        ant = status['antigravity']
+        st.warning(f"🚀 **ANTIGRAVITY ALERT**: Short Covering Detected! Score: {ant['score']} | Wall: {ant['wall_strike']} | Shed: {ant['oi_shed']}")
     # --- SHOCK BANNER ---
     # Check for STOP flag or Emergency State
     if os.path.exists("STOP.flag"):
@@ -261,8 +269,10 @@ with tab1:
     r2_c1, r2_c2, r2_c3, r2_c4 = st.columns(4)
     # PCR from real features
     pcr = status.get('oi_stats', {}).get('pcr', 0.0)
+    antigravity_score = status.get('antigravity', {}).get('score', 0.0)
+    
     r2_c1.metric("PCR", f"{pcr:.2f}", delta="Live")
-    r2_c2.metric("IV Rank", f"{np.random.randint(0, 100)}%", delta="-2%")
+    r2_c2.metric("Antigravity Score", f"{antigravity_score}", delta="Short Squeeze" if antigravity_score > 75 else "Stable")
     r2_c3.metric("Active Model", "v1.2 (LGBM+LSTM)")
     r2_c4.metric("Next Retrain", "4h 12m")
 
@@ -369,6 +379,10 @@ async def analyze_candidate(symbol):
                 
             best['action'] = action
             best['sentiment'] = sentiment
+
+            # 4. Antigravity Logic
+            ant = fe.calculate_antigravity(df, spot)
+            best['antigravity_score'] = ant['score']
                 
             return best
     except Exception as e:
@@ -468,12 +482,13 @@ with tab2:
                 scan_df.loc[idx, 'Rec. Strike'] = setup.get('strike', '—')
                 scan_df.loc[idx, 'Trend'] = setup.get('action', '—')
                 scan_df.loc[idx, 'Confidence'] = f"{setup.get('confidence_score', 0)}%"
+                scan_df.loc[idx, 'Antigravity'] = f"{setup.get('antigravity_score', 0)}"
 
         st.success(f"Found {len(scan_df)} F&O underlyings!")
         
         # Sort by spot price descending and reorder columns for clarity
         scan_df = scan_df.sort_values('spot', ascending=False)
-        cols = ['symbol', 'spot', 'Rec. Strike', 'Trend', 'Confidence']
+        cols = ['symbol', 'spot', 'Rec. Strike', 'Trend', 'Confidence', 'Antigravity']
         st.dataframe(scan_df[cols], use_container_width=True)
         
         st.markdown("### 💡 Recommended 'Best' Chains")

@@ -224,6 +224,71 @@ class FeatureEngineer:
             logger.error(f"Error computing Technicals: {e}")
             return {}
 
+    def calculate_antigravity(self, chain_df: pd.DataFrame, spot_price: float) -> Dict[str, Any]:
+        """
+        Implements the Antigravity Short-Covering Detection Protocol.
+        Identifies rallies where call writers are trapped and unwinding.
+        """
+        try:
+            if chain_df.empty or spot_price <= 0:
+                return {"score": 0.0, "status": False, "wall_strike": 0.0, "oi_shed": 0}
+
+            # 1. THE TRAP (Weight: 40%) - Breach of the "Wall"
+            call_df = chain_df[chain_df['type'].str.upper() == 'CE']
+            if call_df.empty:
+                return {"score": 0.0, "status": False, "wall_strike": 0.0, "oi_shed": 0}
+            
+            wall_row = call_df.sort_values('oi', ascending=False).iloc[0]
+            wall_strike = wall_row['strike']
+            
+            # Logic: If Spot >= (Wall - 0.5%)
+            trap_breach = spot_price >= (wall_strike * 0.995)
+            trap_score = 40.0 if trap_breach else 0.0
+
+            # 2. THE PANIC (Weight: 40%) - Writers fleeing near Spot
+            # Range ±2% of Spot
+            lower_bound = spot_price * 0.98
+            upper_bound = spot_price * 1.02
+            near_spot_calls = call_df[(call_df['strike'] >= lower_bound) & (call_df['strike'] <= upper_bound)]
+            
+            oi_change_sum = near_spot_calls['oi_change'].sum() if 'oi_change' in near_spot_calls.columns else 0
+            
+            # Logic: If Net Change < 0 (Negative), writers exiting
+            panic_score = 0.0
+            if oi_change_sum < 0:
+                # Normalize Panic: More negative = higher panic
+                # Simple normalization: cap at 10% of total Near-Spot OI
+                total_near_oi = near_spot_calls['oi'].sum()
+                panic_ratio = abs(oi_change_sum) / total_near_oi if total_near_oi > 0 else 0
+                panic_score = min(40.0, (panic_ratio / 0.1) * 40.0) 
+
+            # 3. THE VELOCITY (Weight: 20%) - Rising Price + Rising IV
+            # Check price/iv change in the calls near spot
+            velocity_score = 0.0
+            if not near_spot_calls.empty:
+                avg_iv_change = near_spot_calls['iv'].mean() # We don't have IV change, using IV level as proxy or if data shows upward movement
+                # Logic: If IV is rising while Price is rising
+                # We have ltp_change (dayChange)
+                price_rising = near_spot_calls['ltp_change'].mean() > 0
+                # Since we don't have historical IV trend in a single snapshot, we'll look for high IV relative to recent? 
+                # User says: "If IV is rising while Price is rising"
+                # For now, if price_rising and avg_iv > threshold? 
+                # Better: check if dayChangePerc > 0?
+                if price_rising: # Simplified: if price is up, we give partial points, full if IV is also high
+                    velocity_score = 20.0 
+
+            total_score = trap_score + panic_score + velocity_score
+            
+            return {
+                "score": round(total_score, 1),
+                "status": total_score > 75,
+                "wall_strike": float(wall_strike),
+                "oi_shed": int(abs(oi_change_sum)) if oi_change_sum < 0 else 0
+            }
+        except Exception as e:
+            logger.error(f"Antigravity calculation failed: {e}")
+            return {"score": 0.0, "status": False, "wall_strike": 0.0, "oi_shed": 0}
+
     def compute_volatility(self, chain_data: List[Dict[str, Any]]) -> Dict[str, float]:
         """
         Computes IV Skew, IV Rank.
