@@ -381,6 +381,7 @@ async def analyze_candidate(symbol):
             best['sentiment'] = sentiment
 
             # 4. Antigravity Logic
+            fe = FeatureEngineer()
             ant = fe.calculate_antigravity(df, spot)
             best['antigravity_score'] = ant['score']
                 
