@@ -295,13 +295,12 @@ class FeatureEngineer:
         """
         try:
             current_volume = quote_data.get('volume', 0)
-            oi_change = quote_data.get('oi_change', 0)
             
+            # Constraint: Default RVol to 1.0 if avg_volume is missing
             if avg_volume and avg_volume > 0:
                 rvol = current_volume / avg_volume
             else:
-                # Fallback: compare current_volume vs open_interest_change absolute
-                rvol = current_volume / max(1, abs(oi_change))
+                rvol = 1.0
             
             status = "NEUTRAL"
             if rvol > 3.0:
@@ -315,7 +314,7 @@ class FeatureEngineer:
             }
         except Exception as e:
             logger.error(f"Error calculating momentum burst: {e}")
-            return {'status': "ERROR", 'rvol_score': 0.0}
+            return {'status': "NEUTRAL", 'rvol_score': 1.0}
 
     def calculate_gamma_decoupling(self, spot_price: float, prev_spot: float, option_price: float, prev_option_price: float, delta: float) -> Dict[str, Any]:
         """

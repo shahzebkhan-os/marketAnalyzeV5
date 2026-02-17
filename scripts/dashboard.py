@@ -76,6 +76,9 @@ if auto_exec:
 else:
     st.sidebar.warning("Auto-Execution DISABLED")
 
+st.sidebar.divider()
+sniper_mode = st.sidebar.checkbox("🎯 Sniper Mode (Auto-Refresh)", value=False)
+
 # --- Manual Trade Override ---
 with st.sidebar.expander("🛠️ Manual Trade Override"):
     with st.form("manual_trade_form"):
@@ -823,7 +826,87 @@ if os.path.exists("STOP.flag"):
 else:
      st.info("No recent shocks detected.")
 
+# --- Phase 2: Sniper Mode Fragment ---
+@st.fragment(run_every="10s")
+def render_live_ticker():
+    if not sniper_mode:
+        return
+    
+    st.divider()
+    st.header("🎯 Real-Time Sniper Ticker")
+    
+    # Get Top 10 from scanner results or default list
+    watchlist = []
+    if st.session_state.scanner_results:
+        scan_df = pd.DataFrame(st.session_state.scanner_results)
+        watchlist = scan_df.sort_values('spot', ascending=False).head(10)['symbol'].tolist()
+    else:
+        watchlist = ["NIFTY", "BANKNIFTY", "RELIANCE", "TCS", "HDFCBANK", "INFY", "ICICIBANK", "SBIN", "BHARTIARTL", "KOTAKBANK"]
+    
+    fe = FeatureEngineer()
+    client = get_groww_client()
+    
+    # Dense table header
+    h1, h2, h3, h4 = st.columns([2, 1, 1, 1])
+    h1.markdown("**Symbol (Spot)**")
+    h2.markdown("**Momentum**")
+    h3.markdown("**AntiGravity**")
+    h4.markdown("**Gamma Lag**")
+    
+    for sym in watchlist:
+        try:
+            # Note: Using asyncio.run inside fragment loop for individual symbol logic
+            # In production, a bulk fetch would be preferred, but here we prioritize modular logic
+            data = asyncio.run(client.fetch_option_chain(sym))
+            spot = data.get('spot_price', 0.0)
+            chain_data = data.get('option_chain', [])
+            
+            # Logic & State
+            if 'price_history_state' not in st.session_state:
+                st.session_state.price_history_state = {}
+            
+            pstate = st.session_state.price_history_state.get(sym, {})
+            prev_spot = pstate.get('spot', spot)
+            
+            # Find ATM for metrics
+            atm_strike = min(chain_data, key=lambda x: abs(x['strike'] - spot)) if chain_data else {}
+            atm_ltp = atm_strike.get('ltp', 0.0)
+            prev_ltp = pstate.get('atm_price', atm_ltp)
+            atm_delta = atm_strike.get('delta', 0.5)
+            
+            mom = fe.calculate_momentum_burst(atm_strike)
+            dec = fe.calculate_gamma_decoupling(spot, prev_spot, atm_ltp, prev_ltp, atm_delta)
+            ant = fe.calculate_antigravity(pd.DataFrame(chain_data), spot)
+            
+            # Update state
+            st.session_state.price_history_state[sym] = {'spot': spot, 'atm_price': atm_ltp}
+            
+            # UI Row Rendering
+            r1, r2, r3, r4 = st.columns([2, 1, 1, 1])
+            r1.write(f"**{sym}** ({spot:.2f})")
+            
+            # Momentum Status (Color logic)
+            m_status = mom['status']
+            m_color = "#00FF00" if m_status == "IGNITION" else ("#FFA500" if m_status == "ACTIVE" else "#888888")
+            r2.markdown(f"<span style='color: {m_color}; font-weight: bold;'>{m_status}</span>", unsafe_allow_html=True)
+            
+            r3.write(f"{ant['score']}")
+            
+            # Gamma Lag (Color logic)
+            d_pct = dec['dislocation_pct']
+            d_color = "#00FF00" if d_pct < -5 else ("#FF0000" if d_pct > 5 else "#888888")
+            r4.markdown(f"<span style='color: {d_color}'>{d_pct:.1f}%</span>", unsafe_allow_html=True)
+            
+        except Exception as ticker_err:
+             logger.error(f"Ticker Error for {sym}: {ticker_err}")
+             continue
+
+# Execute Sniper Ticker Fragment
+if sniper_mode:
+    render_live_ticker()
+
 # Refresh
-time.sleep(refresh_rate)
-st.rerun()
+if not sniper_mode:
+    time.sleep(refresh_rate)
+    st.rerun()
 
