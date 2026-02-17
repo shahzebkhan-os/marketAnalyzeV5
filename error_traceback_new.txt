@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/aayan/newMl/dashboard.py", line 107, in fetch_live_data
+    data = await client.fetch_option_chain(symbol)
+  File "/Users/aayan/newMl/client.py", line 109, in fetch_option_chain
+    return await self.web_provider.fetch_option_chain(symbol)
+  File "/Users/aayan/newMl/client.py", line 351, in fetch_option_chain
+    slug = mapping.get(symbol.upper(), str(symbol).lower())
+AttributeError: 'int' object has no attribute 'upper'

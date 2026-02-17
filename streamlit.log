@@ -1,0 +1,731 @@
+/Users/aayan/newMl/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+
+  You can now view your Streamlit app in your browser.
+
+  Network URL: http://192.168.1.10:8501
+  External URL: http://45.118.159.78:8501
+
+2026-02-17 12:38:13 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:38:13 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:38:13 [info     ] Fetching full instrument list (may take seconds)...
+2026-02-17 12:38:28 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:38:29 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:38:41 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:38:42 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:38:51 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:38:51 [info     ] Authentication successful via Key/Secret exchange
+2026-02-17 12:38:51 [info     ] Initializing SDK for market scan token_exists=True
+Ready to Groww!
+2026-02-17 12:38:51 [info     ] Found 214 real F&O underlyings
+2026-02-17 12:38:51 [info     ] Fetching LTP chunk 1...
+2026-02-17 12:38:51 [info     ] Fetching LTP chunk 2...
+2026-02-17 12:38:51 [info     ] Fetching LTP chunk 3...
+2026-02-17 12:38:51 [info     ] Fetching LTP chunk 4...
+2026-02-17 12:38:51 [info     ] Fetching LTP chunk 5...
+2026-02-17 12:39:02 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:39:02 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:39:15 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:39:16 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:39:29 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:39:29 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:39:43 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:39:43 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:39:49 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:39:49 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:40:02 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:40:03 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:40:16 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:40:16 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:40:29 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:40:29 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:40:42 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:40:43 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:40:55 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:40:55 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:41:08 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:41:08 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:41:21 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:41:21 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:41:34 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:41:34 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:41:47 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:41:47 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:42:00 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:42:00 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:42:13 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:42:13 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:42:26 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:42:26 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:42:40 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:42:41 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:42:54 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:42:55 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:43:08 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:43:08 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:43:22 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:43:22 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:43:36 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:43:36 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:43:50 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:43:50 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:44:03 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:44:03 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:44:16 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:44:16 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:44:29 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:44:29 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:44:42 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:44:42 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:44:55 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:44:56 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:45:08 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:45:09 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:45:22 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:45:22 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:45:35 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:45:35 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:45:49 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:45:49 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:46:02 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:46:02 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:46:15 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:46:15 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:46:28 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:46:28 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:46:41 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:46:41 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:46:54 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:46:54 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:47:08 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:47:08 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:47:21 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:47:22 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:47:34 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:47:35 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:47:48 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:47:48 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:48:01 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:48:02 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:48:15 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:48:15 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:48:28 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:48:28 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:48:41 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:48:41 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:48:54 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:48:55 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:49:07 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:49:08 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:49:21 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:49:21 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:49:34 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:49:34 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:49:48 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:49:48 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:50:01 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:50:01 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:50:14 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:50:15 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:50:27 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:50:28 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:50:41 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:50:41 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:50:54 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:50:54 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:51:07 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:51:07 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:51:11 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:51:11 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:51:13 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:51:13 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:51:22 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:51:22 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:51:28 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:51:29 [info     ] Authentication successful via Key/Secret exchange
+2026-02-17 12:51:29 [info     ] Initializing SDK for market scan token_exists=True
+Ready to Groww!
+2026-02-17 12:51:29 [info     ] Found 214 real F&O underlyings
+2026-02-17 12:51:29 [info     ] Fetching LTP chunk 1...
+2026-02-17 12:51:29 [info     ] Fetching LTP chunk 2...
+2026-02-17 12:51:29 [info     ] Fetching LTP chunk 3...
+2026-02-17 12:51:29 [info     ] Fetching LTP chunk 4...
+2026-02-17 12:51:29 [info     ] Fetching LTP chunk 5...
+2026-02-17 12:51:37 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:51:38 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:51:41 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:51:41 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:52:44 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:52:46 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:53:49 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:53:49 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:53:49 [info     ] Fetching full instrument list (may take seconds)...
+2026-02-17 12:53:53.829 Serialization of dataframe to Arrow table was unsuccessful due to: ("Could not convert '—' with type str: tried to convert to double", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:54:10 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:54:10 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:54:10 [info     ] Fetching full instrument list (may take seconds)...
+2026-02-17 12:54:15 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:54:15 [info     ] Authentication successful via Key/Secret exchange
+2026-02-17 12:54:15 [info     ] Initializing SDK for market scan token_exists=True
+Ready to Groww!
+2026-02-17 12:54:15 [info     ] Found 214 real F&O underlyings
+2026-02-17 12:54:15 [info     ] Fetching LTP chunk 1...
+2026-02-17 12:54:15 [info     ] Fetching LTP chunk 2...
+2026-02-17 12:54:15 [info     ] Fetching LTP chunk 3...
+2026-02-17 12:54:15 [info     ] Fetching LTP chunk 4...
+2026-02-17 12:54:15 [info     ] Fetching LTP chunk 5...
+2026-02-17 12:54:26 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:54:26 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:54:29 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:54:29 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:54:29 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:54:29 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:54:29 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:54:29 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:54:30 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:54:30 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:54:30 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:54:30 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:54:30 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:54:30 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:54:30 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:54:30 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:54:30 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:54:31 [error    ] Authentication failed          error=The rate limit for the Groww API has been exceeded. Please try again later.
+2026-02-17 12:54:31 [error    ] Analyze candidate failed       error=The rate limit for the Groww API has been exceeded. Please try again later. symbol=ADANIGREEN
+2026-02-17 12:54:31 [error    ] Authentication failed          error=The rate limit for the Groww API has been exceeded. Please try again later.
+2026-02-17 12:54:31 [error    ] Analyze candidate failed       error=The rate limit for the Groww API has been exceeded. Please try again later. symbol=ADANIPORTS
+2026-02-17 12:54:31 [error    ] Authentication failed          error=The rate limit for the Groww API has been exceeded. Please try again later.
+2026-02-17 12:54:31 [error    ] Analyze candidate failed       error=The rate limit for the Groww API has been exceeded. Please try again later. symbol=ALKEM
+2026-02-17 12:54:31 [error    ] Authentication failed          error=The rate limit for the Groww API has been exceeded. Please try again later.
+2026-02-17 12:54:31 [error    ] Analyze candidate failed       error=The rate limit for the Groww API has been exceeded. Please try again later. symbol=AMBER
+2026-02-17 12:54:31 [error    ] Authentication failed          error=The rate limit for the Groww API has been exceeded. Please try again later.
+2026-02-17 12:54:31 [error    ] Analyze candidate failed       error=The rate limit for the Groww API has been exceeded. Please try again later. symbol=AMBUJACEM
+2026-02-17 12:54:31 [error    ] Reconstruction error           error=Rate limit has breached for your request. Please try again later.
+2026-02-17 12:54:31 [error    ] Traceback (most recent call last):
+  File "/Users/aayan/newMl/client.py", line 109, in _reconstruct_option_chain
+    spot_quote = self.groww_sdk.get_quote(trading_symbol=symbol, exchange=exchange, segment="CASH")
+  File "/Users/aayan/newMl/.venv/lib/python3.9/site-packages/growwapi/groww/client.py", line 400, in get_quote
+    return self._parse_response(response)
+  File "/Users/aayan/newMl/.venv/lib/python3.9/site-packages/growwapi/groww/client.py", line 1501, in _parse_response
+    raise GrowwAPIException(code=error["code"], msg=error["message"])
+growwapi.groww.exceptions.GrowwAPIException: Rate limit has breached for your request. Please try again later.
+
+2026-02-17 12:54:31 [error    ] Failed to reconstruct option chain error=Rate limit has breached for your request. Please try again later. symbol=ADANIENT
+2026-02-17 12:54:31 [error    ] Analyze candidate failed       error=Rate limit has breached for your request. Please try again later. symbol=ADANIENT
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x172482cd0>
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x28fe44c10>
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x28ff4bd00>
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x171ec4040>
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x28fe6fd60>
+2026-02-17 12:54:32.773 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:54:43 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:54:43 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:54:45.720 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:54:54.112 Serialization of dataframe to Arrow table was unsuccessful due to: ("Could not convert '—' with type str: tried to convert to double", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:54:55 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:54:56 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:54:59.673 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:55:09 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:55:10 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:55:13.417 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:55:23 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:55:23 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:55:26.841 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:55:37 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:55:37 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:55:40.214 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:55:50 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:55:50 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:55:53.070 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:55:54.288 Serialization of dataframe to Arrow table was unsuccessful due to: ("Could not convert '—' with type str: tried to convert to double", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:56:03 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:56:03 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:56:06.027 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:56:16 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:56:16 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:56:19.224 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:56:29 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:56:29 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:56:33.319 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:56:43 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:56:43 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:57:13.652 Serialization of dataframe to Arrow table was unsuccessful due to: ("Could not convert '—' with type str: tried to convert to double", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:57:13.676 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:57:24 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:57:24 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:57:26.636 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:57:36 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:57:37 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:57:39.754 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:57:49 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:57:50 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:57:53.380 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:58:03 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:58:03 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:58:06.907 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:58:14.055 Serialization of dataframe to Arrow table was unsuccessful due to: ("Could not convert '—' with type str: tried to convert to double", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:58:17 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:58:17 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:58:20.040 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:58:30 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:58:30 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:58:32.974 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:58:43 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:58:43 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:58:46.705 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:58:57 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:58:57 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:59:00.016 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:59:10 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:59:10 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:59:13.623 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:59:14.403 Serialization of dataframe to Arrow table was unsuccessful due to: ("Could not convert '—' with type str: tried to convert to double", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:59:23 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:59:24 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:59:27.112 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:59:37 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:59:37 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:59:40.652 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 12:59:50 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 12:59:51 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 12:59:54.262 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 13:00:04 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:00:04 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 13:00:07.314 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 13:00:14.760 Serialization of dataframe to Arrow table was unsuccessful due to: ("Could not convert '—' with type str: tried to convert to double", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 13:00:17 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:00:17 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 13:00:20.294 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 13:00:30 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:00:30 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 13:00:33.322 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 13:00:43 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:00:43 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 13:00:46.264 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 13:00:56 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:00:56 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 13:00:59.412 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 13:01:09 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:01:09 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 13:01:12.519 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 13:01:15.018 Serialization of dataframe to Arrow table was unsuccessful due to: ("Could not convert '—' with type str: tried to convert to double", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 13:01:22 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:01:23 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 13:01:25.907 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 13:01:36 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:01:36 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 13:01:39.216 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 13:01:49 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:01:49 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 13:01:52.611 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 13:02:02 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:02:03 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 13:02:05.805 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 13:02:15.341 Serialization of dataframe to Arrow table was unsuccessful due to: ("Could not convert '—' with type str: tried to convert to double", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 13:02:15 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:02:16 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 13:02:18.758 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 13:02:29 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:02:29 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 13:02:31.946 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 13:02:42 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:02:42 [info     ] Authentication successful via Key/Secret exchange
+Ready to Groww!
+2026-02-17 13:02:44.901 Serialization of dataframe to Arrow table was unsuccessful due to: ("Expected bytes, got a 'float' object", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 13:02:55 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:02:55 [error    ] Authentication failed          error=The rate limit for the Groww API has been exceeded. Please try again later.
+2026-02-17 13:02:55.552 Uncaught app exception
+Traceback (most recent call last):
+  File "/Users/aayan/newMl/.venv/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 535, in _run_script
+    exec(code, module.__dict__)
+  File "/Users/aayan/newMl/dashboard.py", line 227, in <module>
+    c1.metric("Regime", status['regime'], delta="Stable")
+TypeError: 'NoneType' object is not subscriptable
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x296584bb0>
+2026-02-17 13:03:10 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:03:10 [error    ] Authentication failed          error=The rate limit for the Groww API has been exceeded. Please try again later.
+2026-02-17 13:03:10.494 Uncaught app exception
+Traceback (most recent call last):
+  File "/Users/aayan/newMl/.venv/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 535, in _run_script
+    exec(code, module.__dict__)
+  File "/Users/aayan/newMl/dashboard.py", line 227, in <module>
+    c1.metric("Regime", status['regime'], delta="Stable")
+TypeError: 'NoneType' object is not subscriptable
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x2965532e0>
+2026-02-17 13:03:15.672 Uncaught app exception
+Traceback (most recent call last):
+  File "/Users/aayan/newMl/.venv/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 535, in _run_script
+    exec(code, module.__dict__)
+  File "/Users/aayan/newMl/dashboard.py", line 227, in <module>
+    c1.metric("Regime", status['regime'], delta="Stable")
+TypeError: 'NoneType' object is not subscriptable
+2026-02-17 13:05:50 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:05:50 [error    ] Authentication failed          error=The rate limit for the Groww API has been exceeded. Please try again later.
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x28fa8d6a0>
+2026-02-17 13:06:00.401 Serialization of dataframe to Arrow table was unsuccessful due to: ("Could not convert '—' with type str: tried to convert to double", 'Conversion failed for column Rec. Strike with type object'). Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+2026-02-17 13:08:29 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:08:29 [error    ] Authentication failed          error=The rate limit for the Groww API has been exceeded. Please try again later.
+2026-02-17 13:08:29.579 Uncaught app exception
+Traceback (most recent call last):
+  File "/Users/aayan/newMl/.venv/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 535, in _run_script
+    exec(code, module.__dict__)
+  File "/Users/aayan/newMl/dashboard.py", line 227, in <module>
+    c1.metric("Regime", status['regime'], delta="Stable")
+TypeError: 'NoneType' object is not subscriptable
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x297322b50>
+2026-02-17 13:08:37.809 Uncaught app exception
+Traceback (most recent call last):
+  File "/Users/aayan/newMl/.venv/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 535, in _run_script
+    exec(code, module.__dict__)
+  File "/Users/aayan/newMl/dashboard.py", line 227, in <module>
+    c1.metric("Regime", status['regime'], delta="Stable")
+TypeError: 'NoneType' object is not subscriptable
+2026-02-17 13:10:59 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:10:59 [error    ] Authentication failed          error=The rate limit for the Groww API has been exceeded. Please try again later.
+2026-02-17 13:10:59.352 Uncaught app exception
+Traceback (most recent call last):
+  File "/Users/aayan/newMl/.venv/lib/python3.9/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 535, in _run_script
+    exec(code, module.__dict__)
+  File "/Users/aayan/newMl/dashboard.py", line 227, in <module>
+    c1.metric("Regime", status['regime'], delta="Stable")
+TypeError: 'NoneType' object is not subscriptable
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x29646b730>
+2026-02-17 13:12:03 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:12:04 [error    ] Authentication failed          error=The rate limit for the Groww API has been exceeded. Please try again later.
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x28fad4a60>
+2026-02-17 13:12:42 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:12:42 [error    ] Authentication failed          error=The rate limit for the Groww API has been exceeded. Please try again later.
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x17267b730>
+2026-02-17 13:13:30 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:13:31 [error    ] Authentication failed          error=The rate limit for the Groww API has been exceeded. Please try again later.
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x171865c10>
+2026-02-17 13:14:29 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:14:29 [error    ] Authentication failed          error=The rate limit for the Groww API has been exceeded. Please try again later.
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x171834130>
+2026-02-17 13:15:55 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:15:55 [error    ] Authentication failed          error=The rate limit for the Groww API has been exceeded. Please try again later.
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x294f3e5e0>
+2026-02-17 13:16:58 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:16:58 [error    ] Authentication failed          error=The rate limit for the Groww API has been exceeded. Please try again later.
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x294e69ee0>
+2026-02-17 13:18:22 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:18:22 [error    ] Authentication failed          error=The rate limit for the Groww API has been exceeded. Please try again later.
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x1726c2f10>
+2026-02-17 13:27:48 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 13:27:48 [error    ] Authentication failed          error=The rate limit for the Groww API has been exceeded. Please try again later.
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x110155d90>
+2026-02-17 20:26:53 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 20:26:55 [error    ] Authentication failed          error=The rate limit for the Groww API has been exceeded. Please try again later.
+Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x1726c26d0>
+2026-02-17 20:29:08 [info     ] Authenticating with Groww API...
+Ready to Groww!
+2026-02-17 20:29:09 [error    ] Authentication failed          error=The rate limit for the Groww API has been exceeded. Please try again later.
+2026-02-17 20:29:10 [warning  ] Main authentication failed, will rely on Web Fallback error=The rate limit for the Groww API has been exceeded. Please try again later.
+2026-02-17 20:29:10 [info     ] SDK not initialized, attempting Web Fallback... symbol=NIFTY
+2026-02-17 20:29:10 [info     ] Fetching via Web Fallback      url=https://groww.in/options/nifty2026-02-17 20:29:10 [warning  ] Fetch live data exception: maximum recursion depth exceeded while calling a python object
+2026-02-17 20:30:19 [info     ] SDK not initialized, attempting Web Fallback... symbol=NIFTY
+2026-02-17 20:30:19 [info     ] Fetching via Web Fallback      url=https://groww.in/options/nifty
+2026-02-17 20:30:20 [warning  ] Fetch live data exception: event loop is closed
+2026-02-17 20:30:34 [info     ] SDK not initialized, attempting Web Fallback... symbol=NIFTY
+2026-02-17 20:30:34 [info     ] Fetching via Web Fallback      url=https://groww.in/options/nifty
+2026-02-17 20:30:34 [warning  ] Fetch live data exception: event loop is closed
+2026-02-17 20:31:51 [info     ] SDK not initialized, attempting Web Fallback... symbol=NIFTY
+2026-02-17 20:31:51 [info     ] Fetching via Web Fallback      url=https://groww.in/options/nifty
+2026-02-17 20:31:51 [warning  ] Fetch live data exception: event loop is closed
+2026-02-17 20:32:32 [info     ] Initializing SDK for market scan token_exists=False
+2026-02-17 20:32:42 [info     ] SDK not initialized, attempting Web Fallback... symbol=NIFTY
+2026-02-17 20:32:42 [info     ] Fetching via Web Fallback      url=https://groww.in/options/nifty
+2026-02-17 20:32:42 [warning  ] Fetch live data exception: event loop is closed
+2026-02-17 20:34:34 [info     ] SDK not initialized, attempting Web Fallback... symbol=NIFTY
+2026-02-17 20:34:34 [info     ] Fetching via Web Fallback      url=https://groww.in/options/nifty
+2026-02-17 20:34:35 [warning  ] Fetch live data exception: event loop is closed
+2026-02-17 20:35:35 [info     ] SDK not initialized, attempting Web Fallback... symbol=NIFTY
+2026-02-17 20:35:35 [info     ] Fetching via Web Fallback      url=https://groww.in/options/nifty
+2026-02-17 20:35:36 [warning  ] Fetch live data exception: event loop is closed
+2026-02-17 20:36:39 [info     ] SDK not initialized, attempting Web Fallback... symbol=BANKNIFTY
+2026-02-17 20:36:39 [info     ] Fetching via Web Fallback      url=https://groww.in/options/banknifty
+2026-02-17 20:36:39 [warning  ] Fetch live data exception: event loop is closed
+2026-02-17 20:37:09 [info     ] SDK not initialized, attempting Web Fallback... symbol=NIFTY
+2026-02-17 20:37:10 [info     ] Fetching via Web Fallback      url=https://groww.in/options/nifty
+2026-02-17 20:37:10 [warning  ] Fetch live data exception: event loop is closed
+2026-02-17 20:37:36 [info     ] SDK not initialized, attempting Web Fallback... symbol=NIFTY
+2026-02-17 20:37:36 [info     ] Fetching via Web Fallback      url=https://groww.in/options/nifty
+2026-02-17 20:37:36 [warning  ] Fetch live data exception: event loop is closed
+2026-02-17 20:37:44 [info     ] SDK not initialized, attempting Web Fallback... symbol=NIFTY
+2026-02-17 20:37:45 [info     ] Fetching via Web Fallback      url=https://groww.in/options/nifty
+2026-02-17 20:37:45 [warning  ] Fetch live data exception: event loop is closed
+2026-02-17 20:38:34 [info     ] SDK not initialized, attempting Web Fallback... symbol=NIFTY
+2026-02-17 20:38:34 [info     ] Fetching via Web Fallback      url=https://groww.in/options/nifty
+2026-02-17 20:38:34 [warning  ] Fetch live data exception: event loop is closed
+2026-02-17 20:38:57 [info     ] SDK not initialized, attempting Web Fallback... symbol=NIFTY
+2026-02-17 20:38:57 [info     ] Fetching via Web Fallback      url=https://groww.in/options/nifty
+2026-02-17 20:38:57 [warning  ] Fetch live data exception: event loop is closed
+2026-02-17 20:39:52 [info     ] SDK not initialized, attempting Web Fallback... symbol=NIFTY
+2026-02-17 20:39:52 [info     ] Fetching via Web Fallback      url=https://groww.in/options/nifty
+2026-02-17 20:39:52 [warning  ] Fetch live data exception: event loop is closed
+2026-02-17 20:40:36 [info     ] SDK not initialized, attempting Web Fallback... symbol=BANKNIFTY
+2026-02-17 20:40:36 [info     ] Fetching via Web Fallback      url=https://groww.in/options/banknifty
+2026-02-17 20:40:37 [warning  ] Fetch live data exception: event loop is closed
+2026-02-17 20:41:47 [info     ] SDK not initialized, attempting Web Fallback... symbol=NIFTY
+2026-02-17 20:41:47 [info     ] Fetching via Web Fallback      url=https://groww.in/options/nifty
+2026-02-17 20:41:47 [warning  ] Fetch live data exception: event loop is closed
+2026-02-17 20:42:09 [info     ] SDK not initialized, attempting Web Fallback... symbol=BANKNIFTY
+2026-02-17 20:42:09 [info     ] Fetching via Web Fallback      url=https://groww.in/options/banknifty
+2026-02-17 20:42:09 [warning  ] Fetch live data exception: event loop is closed

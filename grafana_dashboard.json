@@ -1,0 +1,42 @@
+{
+  "title": "Holographic Glenn - Operational Dashboard",
+  "panels": [
+    {
+      "title": "System Latency",
+      "type": "graph",
+      "targets": [
+        { "expr": "rate(system_ingestion_latency_seconds_sum[1m]) / rate(system_ingestion_latency_seconds_count[1m])", "legendFormat": "Avg Latency" }
+      ]
+    },
+    {
+      "title": "Model AUC",
+      "type": "gauge",
+      "targets": [
+        { "expr": "model_auc_score", "legendFormat": "{{model_version}}" }
+      ]
+    },
+    {
+      "title": "Portfolio PnL",
+      "type": "stat",
+      "targets": [
+        { "expr": "portfolio_pnl_total" }
+      ]
+    },
+    {
+      "title": "Alert Count",
+      "type": "bargauge",
+      "targets": [
+        { "expr": "sum by (priority) (alert_sent_total)" }
+      ]
+    },
+    {
+        "title": "Health Status",
+        "type": "stat",
+        "targets": [
+            { "expr": "db_connection_status", "legendFormat": "DB" },
+            { "expr": "api_connection_status", "legendFormat": "API" }
+        ],
+        "thresholds": [ { "color": "red", "value": 0 }, { "color": "green", "value": 1 } ]
+    }
+  ]
+}
