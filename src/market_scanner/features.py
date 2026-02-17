@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from scipy.stats import norm
 import logging
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 
 logger = logging.getLogger(__name__)
 
@@ -288,6 +288,64 @@ class FeatureEngineer:
         except Exception as e:
             logger.error(f"Antigravity calculation failed: {e}")
             return {"score": 0.0, "status": False, "wall_strike": 0.0, "oi_shed": 0}
+
+    def calculate_momentum_burst(self, quote_data: Dict[str, Any], avg_volume: Optional[float] = None) -> Dict[str, Any]:
+        """
+        Detects immediate "Ignition" moves where big players are forcing price action.
+        """
+        try:
+            current_volume = quote_data.get('volume', 0)
+            oi_change = quote_data.get('oi_change', 0)
+            
+            if avg_volume and avg_volume > 0:
+                rvol = current_volume / avg_volume
+            else:
+                # Fallback: compare current_volume vs open_interest_change absolute
+                rvol = current_volume / max(1, abs(oi_change))
+            
+            status = "NEUTRAL"
+            if rvol > 3.0:
+                status = "IGNITION"
+            elif rvol > 1.5:
+                status = "ACTIVE"
+            
+            return {
+                'status': status,
+                'rvol_score': float(rvol)
+            }
+        except Exception as e:
+            logger.error(f"Error calculating momentum burst: {e}")
+            return {'status': "ERROR", 'rvol_score': 0.0}
+
+    def calculate_gamma_decoupling(self, spot_price: float, prev_spot: float, option_price: float, prev_option_price: float, delta: float) -> Dict[str, Any]:
+        """
+        Identify "Lagging Options" where Spot moves but Option Premium hasn't caught up.
+        """
+        try:
+            if prev_spot <= 0 or prev_option_price <= 0:
+                return {'signal': "NEUTRAL", 'dislocation_pct': 0.0}
+
+            spot_change_pct = (spot_price - prev_spot) / prev_spot
+            expected_move = (spot_change_pct * delta) * prev_option_price
+            actual_move = (option_price - prev_option_price)
+            
+            # Dislocation as a percentage of the previous option price
+            dislocation = actual_move - expected_move
+            dislocation_pct = (dislocation / prev_option_price) * 100.0
+            
+            signal = "NEUTRAL"
+            if dislocation_pct < -5.0:
+                signal = "Undervalued (Buy Signal)"
+            elif dislocation_pct > 5.0:
+                signal = "Overvalued (Avoid)"
+            
+            return {
+                'signal': signal,
+                'dislocation_pct': float(dislocation_pct)
+            }
+        except Exception as e:
+            logger.error(f"Error calculating gamma decoupling: {e}")
+            return {'signal': "ERROR", 'dislocation_pct': 0.0}
 
     def compute_volatility(self, chain_data: List[Dict[str, Any]]) -> Dict[str, float]:
         """

@@ -123,6 +123,29 @@ async def fetch_live_data(symbol):
             vol_stats = fe.compute_volatility(chain_data)
             antigravity = fe.calculate_antigravity(chain_df, spot)
             
+            # --- PHASE 1: Momentum & Gamma logic ---
+            # Track state for Delta/Decoupling in session_state
+            if 'price_history_state' not in st.session_state:
+                st.session_state.price_history_state = {}
+            
+            pstate = st.session_state.price_history_state.get(symbol, {})
+            prev_spot = pstate.get('spot', spot)
+            
+            # Find ATM option for Gamma Decoupling
+            atm_strike = min(chain_data, key=lambda x: abs(x['strike'] - spot)) if chain_data else None
+            atm_option_price = atm_strike['ltp'] if atm_strike else 0.0
+            prev_option_price = pstate.get('atm_price', atm_option_price)
+            atm_delta = atm_strike.get('delta', 0.5) if atm_strike else 0.5
+
+            momentum = fe.calculate_momentum_burst(atm_strike if atm_strike else {})
+            decoupling = fe.calculate_gamma_decoupling(spot, prev_spot, atm_option_price, prev_option_price, atm_delta)
+            
+            # Update state for next run
+            st.session_state.price_history_state[symbol] = {
+                'spot': spot,
+                'atm_price': atm_option_price
+            }
+
             return {
                 "regime": "Trending (Live)", # Placeholder
                 "confidence": 85.0, # Placeholder
@@ -133,6 +156,8 @@ async def fetch_live_data(symbol):
                 "greeks": greeks,
                 "vol_stats": vol_stats,
                 "antigravity": antigravity,
+                "momentum": momentum,
+                "decoupling": decoupling,
                 "chain_data": chain_data
             }
     except Exception as e:
@@ -256,6 +281,22 @@ with tab1:
                 SYSTEM HALTED. RISK PARAMETERS REDUCED. CHECK LOGS.
             </div>
         """, unsafe_allow_html=True)
+    
+    # --- PHASE 2: Alpha Signals Rendering ---
+    if status:
+        mom = status.get('momentum', {})
+        dec = status.get('decoupling', {})
+        
+        a1, a2 = st.columns(2)
+        if mom.get('status') == "IGNITION":
+            a1.error(f"🔥 **MOMENTUM IGNITION**: RVol {mom.get('rvol_score', 0):.1f}x - Big Players entry detected!")
+        elif mom.get('status') == "ACTIVE":
+            a1.warning(f"⚡ **MOMENTUM ACTIVE**: RVol {mom.get('rvol_score', 0):.1f}x")
+        
+        if "Undervalued" in dec.get('signal', ''):
+            a2.success(f"💎 **GAMMA DECOUPLING**: Option Undervalued ({dec.get('dislocation_pct', 0):.1f}%) - Scalp Long!")
+        elif "Overvalued" in dec.get('signal', ''):
+            a2.warning(f"⚠️ **GAMMA DECOUPLING**: Option Overvalued ({dec.get('dislocation_pct', 0):.1f}%) - Avoid Longs.")
     # --------------------
 
     # Header Metrics
