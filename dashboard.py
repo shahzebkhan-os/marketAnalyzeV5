@@ -448,7 +448,7 @@ with tab2:
                     # Real-time Table Update (Selective refresh)
                     current_scan_df = scan_df.copy()
                     # Add placeholder columns if they don't exist
-                    for col in ['Rec. Strike', 'Trend', 'Confidence']:
+                    for col in ['Rec. Strike', 'Trend', 'Confidence', 'Antigravity']:
                         if col not in current_scan_df.columns:
                             current_scan_df[col] = "—"
                     
@@ -460,7 +460,7 @@ with tab2:
                             current_scan_df.loc[idx, 'Confidence'] = f"{setup.get('confidence_score', 0)}%"
                     
                     current_scan_df = current_scan_df.sort_values('spot', ascending=False)
-                    table_placeholder.dataframe(current_scan_df[['symbol', 'spot', 'Rec. Strike', 'Trend', 'Confidence']], use_container_width=True)
+                    table_placeholder.dataframe(current_scan_df[['symbol', 'spot', 'Rec. Strike', 'Trend', 'Confidence', 'Antigravity']], use_container_width=True)
                     
                 except Exception as e:
                     logger.error(f"Batch Analysis failed for {cand}: {e}")
@@ -471,7 +471,7 @@ with tab2:
         scan_df = pd.DataFrame(st.session_state.scanner_results)
         
         # Add placeholder columns if they don't exist
-        for col in ['Rec. Strike', 'Trend', 'Confidence']:
+        for col in ['Rec. Strike', 'Trend', 'Confidence', 'Antigravity']:
             if col not in scan_df.columns:
                 scan_df[col] = "—"
         
